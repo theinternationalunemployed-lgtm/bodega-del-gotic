@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bodegadelgtic.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bodegadelgtic.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bodegadelgtic.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bodegadelgtic.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bodegadelgtic.com/"/>
+  </url>
+  <url>
+    <loc>https://bodegadelgtic.com/ca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bodegadelgtic.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bodegadelgtic.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bodegadelgtic.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bodegadelgtic.com/"/>
+  </url>
+  <url>
+    <loc>https://bodegadelgtic.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bodegadelgtic.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://bodegadelgtic.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bodegadelgtic.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bodegadelgtic.com/"/>
+  </url>
+  <url><loc>https://bodegadelgtic.com/aviso-legal.html</loc></url>
+  <url><loc>https://bodegadelgtic.com/privacidad.html</loc></url>
+  <url><loc>https://bodegadelgtic.com/cookies.html</loc></url>
+</urlset>
