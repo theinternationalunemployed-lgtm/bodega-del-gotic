@@ -1,0 +1,120 @@
+/* Bodega del Gòtic · estilos compartidos por las tres versiones de idioma.
+   Colores: cambia aquí la paleta y se aplica en toda la web. */
+:root {
+  --vino: #6e1a26;
+  --vino-osc: #4a1019;
+  --madera: #3b2416;
+  --crema: #f8f1e4;
+  --crema-2: #efe3cf;
+  --tinta: #2a1c12;
+  --dorado: #d9b36c;
+  --titulos: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --texto: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6.5rem; }
+body { margin: 0; background: var(--crema); color: var(--tinta); font: 1.0625rem/1.6 var(--texto); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--vino); }
+h1, h2, h3 { font-family: var(--titulos); line-height: 1.15; margin: 0 0 .6em; }
+h2 { font-size: clamp(1.75rem, 5vw, 2.5rem); color: var(--vino); }
+h3 { font-size: 1.35rem; color: var(--madera); }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 16px; }
+section { padding: 3.5rem 0; }
+section:nth-of-type(even) { background: var(--crema-2); }
+
+/* Accesibilidad: foco visible sobre fondo claro y oscuro, y salto al contenido */
+:focus-visible { outline: 3px solid var(--tinta); outline-offset: 2px; box-shadow: 0 0 0 6px var(--crema); }
+.skip { position: absolute; left: -999px; top: 0; background: var(--tinta); color: var(--crema); padding: .75rem 1rem; z-index: 20; }
+.skip:focus { left: 0; }
+
+/* Marcador de datos que faltan: visible a propósito */
+.pending { background: #fff3a6; color: #3a2a00; border: 1px dashed #8a6d00; padding: 0 .3em; border-radius: 3px; font-size: .9em; }
+
+/* Cabecera */
+.top { position: sticky; top: 0; z-index: 10; background: var(--vino-osc); color: var(--crema); }
+.top a { color: var(--crema); text-decoration: none; }
+.top-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.25rem; }
+.brand { font: 700 1.25rem var(--titulos); letter-spacing: .02em; }
+.langs { display: flex; gap: .25rem; }
+.langs a { padding: .4rem .55rem; border-radius: 4px; font-size: .9rem; font-weight: 600; }
+.langs a[aria-current] { background: var(--crema); color: var(--vino-osc); }
+.menu { border-top: 1px solid rgba(248, 241, 228, .2); }
+.menu .wrap { display: flex; gap: 1.25rem; overflow-x: auto; white-space: nowrap; }
+.menu a { display: inline-block; padding: .65rem 0; font-size: .95rem; }
+.menu a:hover { color: var(--dorado); }
+
+/* Botones (mínimo 48 px de alto para el dedo) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .7rem 1.4rem;
+  border-radius: 6px; font-weight: 700; text-decoration: none; background: var(--vino); color: var(--crema); border: 2px solid var(--vino); }
+.btn:hover { background: var(--vino-osc); border-color: var(--vino-osc); }
+.btn-alt { background: transparent; color: var(--crema); border-color: var(--crema); }
+.btn-alt:hover { background: var(--crema); color: var(--vino-osc); }
+.btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* Portada: la foto queda detrás del texto */
+.hero { display: grid; padding: 0; background: var(--madera); color: var(--crema); }
+.hero > * { grid-area: 1 / 1; }
+.hero-media, .hero-media img, .hero-media .ph { width: 100%; height: 100%; min-height: 72vh; object-fit: cover; }
+.hero-txt { align-self: end; padding: 2.5rem 0; background: linear-gradient(transparent, rgba(30, 15, 8, .85) 35%); }
+.hero h1 { font-size: clamp(2.5rem, 11vw, 4.5rem); margin-bottom: .2em; }
+.lema { font-size: clamp(1.15rem, 4vw, 1.45rem); max-width: 32rem; margin: 0 0 1.5rem; }
+.nota { font-size: .95rem; opacity: .9; margin: 1rem 0 0; }
+
+/* Huecos de foto mientras no estén las del cliente */
+.ph { display: flex; flex-direction: column; justify-content: center; gap: .4rem; padding: 1rem; aspect-ratio: 4 / 3;
+  background: repeating-linear-gradient(135deg, #4a2d1b 0 14px, #432818 14px 28px); color: var(--crema); font-size: .9rem; }
+.hero-media .ph { justify-content: flex-start; aspect-ratio: auto; }
+
+/* Carta */
+.aviso { margin-bottom: 2rem; }
+.carta { display: grid; gap: 2rem; }
+.carta ul { list-style: none; margin: 0; padding: 0; }
+.carta li { display: flex; align-items: baseline; gap: .5rem; padding: .45rem 0; border-bottom: 1px dotted #b9a68a; }
+.carta li span:first-child { flex: 1; }
+.carta li span:last-child { white-space: nowrap; font-weight: 700; }
+
+/* Galería */
+.galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+.galeria img, .galeria .ph { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+
+/* Horario y mapa */
+.horario { display: grid; gap: 2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--crema); margin-bottom: 1.5rem; }
+th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid #d8c7ab; }
+thead th { background: var(--vino); color: var(--crema); }
+address { font-style: normal; margin-bottom: 1rem; }
+.mapa { aspect-ratio: 4 / 3; background: var(--madera); color: var(--crema); border-radius: 6px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1.5rem; text-align: center; }
+.mapa iframe { width: 100%; height: 100%; border: 0; }
+.mapa p { margin: 0; font-size: .95rem; }
+.mapa a { color: var(--dorado); }
+
+/* Contacto */
+.contacto .btn { width: 100%; font-size: 1.15rem; min-height: 3.75rem; }
+.contacto .btns { display: grid; gap: .75rem; max-width: 28rem; }
+
+/* Pie */
+footer { background: var(--tinta); color: var(--crema); padding: 2.5rem 0 1.5rem; font-size: .95rem; }
+footer a { color: var(--crema); }
+footer ul { list-style: none; padding: 0; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+
+/* Páginas legales */
+.legal { padding: 2.5rem 0 4rem; max-width: 46rem; }
+.legal h1 { color: var(--vino); font-size: 2.2rem; }
+.legal h2 { font-size: 1.35rem; margin-top: 1.75rem; }
+
+/* Botón fijo de llamar: solo en móvil */
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; display: flex; justify-content: center; align-items: center;
+  gap: .5rem; min-height: 3.5rem; padding-bottom: env(safe-area-inset-bottom); background: var(--vino); color: var(--crema);
+  font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 -2px 10px rgba(0, 0, 0, .25); }
+body.home { padding-bottom: 3.5rem; }
+
+@media (min-width: 48em) {
+  .callbar { display: none; }
+  body.home { padding-bottom: 0; }
+  .galeria { grid-template-columns: repeat(4, 1fr); }
+  .carta { grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; }
+  .horario { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
