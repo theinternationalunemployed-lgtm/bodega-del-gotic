@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Misma paleta que la web (../styles.css) */
+@theme {
+  --color-vino: #6e1a26;
+  --color-vino-osc: #4a1019;
+  --color-madera: #3b2416;
+  --color-crema: #f8f1e4;
+  --color-crema-2: #efe3cf;
+  --color-tinta: #2a1c12;
+  --font-titulos: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
