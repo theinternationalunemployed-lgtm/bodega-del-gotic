@@ -24,7 +24,7 @@ El horario también está en el bloque `openingHoursSpecification` del `<head>` 
 - [ ] Número de WhatsApp
 - [ ] Email de contacto
 - [ ] Instagram / otras redes
-- [ ] ¿Reservan por TheFork u otra plataforma? Enlace
+- [x] Reservas online: sistema propio en /reservas/ (plano de mesas de ejemplo, pendiente del real)
 - [ ] Razón social, NIF y (si es sociedad) datos del Registro Mercantil
 - [ ] Proveedor de hosting (para la política de privacidad)
 - [ ] Confirmar que la valoración (4,4★ / ~950 reseñas) sigue vigente al publicar
