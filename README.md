@@ -23,7 +23,7 @@ El horario también está en el bloque `openingHoursSpecification` del `<head>` 
 - [ ] Foto para compartir en redes 1200×630 → `img/og.jpg` y descomentar `og:image`
 - [ ] Número de WhatsApp
 - [ ] Email de contacto
-- [ ] Instagram / otras redes
+- [x] Instagram: @bodega_del_gotic (confirmado: la bio enlaza a bodegadelgtic.com)
 - [x] Reservas online: sistema propio en /reservas/ (plano de mesas de ejemplo, pendiente del real)
 - [ ] Razón social, NIF y (si es sociedad) datos del Registro Mercantil
 - [ ] Proveedor de hosting (para la política de privacidad)
