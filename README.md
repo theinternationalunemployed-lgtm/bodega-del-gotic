@@ -16,7 +16,7 @@ Cada idioma es un archivo. Busca `EDITAR` / `EDIT` y cambia **los tres** archivo
 El horario también está en el bloque `openingHoursSpecification` del `<head>` de cada uno (es lo que lee Google).
 
 ## Pendiente de pedir al cliente
-- [ ] Carta definitiva con precios (y qué va en tapas / raciones / arroces / postres / bebidas)
+- [x] Carta con precios (de la carta del local; falta la de bebidas)
 - [ ] Resto de bebidas (vinos, vermut, refrescos, cafés…)
 - [ ] Foto de portada del local (horizontal, ≥1600 px)
 - [ ] 8 fotos para la galería (platos, cerveza, local), propias del cliente
