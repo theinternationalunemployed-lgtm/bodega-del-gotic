@@ -118,3 +118,65 @@ body.home { padding-bottom: 3.5rem; }
   .horario { grid-template-columns: 1fr 1fr; align-items: start; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Acabados visuales */
+h2 { text-align: center; }
+h2::after { content: ""; display: block; width: 120px; height: 2px; margin: .5em auto 0; background: linear-gradient(90deg, transparent, var(--dorado), transparent); }
+.legal h2 { text-align: left; }
+.legal h2::after { display: none; }
+#nosotros p { max-width: 42rem; margin-inline: auto; text-align: center; font-size: 1.125rem; }
+.aviso { text-align: center; }
+
+.top { transition: box-shadow .3s; }
+.top.scrolled { box-shadow: 0 4px 18px rgba(0, 0, 0, .35); }
+.menu a { position: relative; transition: color .2s; }
+.menu a::after { content: ""; position: absolute; left: 0; right: 0; bottom: .35rem; height: 2px; background: var(--dorado); transform: scaleX(0); transition: transform .25s; }
+.menu a:hover::after, .menu a.on::after { transform: scaleX(1); }
+.menu a.on { color: var(--dorado); }
+
+.btn { transition: translate .2s, box-shadow .2s, background .2s, color .2s; }
+.btn:hover { translate: 0 -2px; box-shadow: 0 8px 18px rgba(0, 0, 0, .25); }
+.hero .btn:not(.btn-alt), section.contacto .btn { background: var(--dorado); border-color: var(--dorado); color: var(--vino-osc); }
+.hero .btn:not(.btn-alt):hover, section.contacto .btn:hover { background: #e7c689; border-color: #e7c689; }
+
+.hero { overflow: hidden; }
+.hero-media { position: relative; overflow: hidden; }
+.hero-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 72% 28%, rgba(217, 179, 108, .3), transparent 58%); }
+.hero h1 { text-shadow: 0 3px 18px rgba(0, 0, 0, .45); }
+
+.carta { display: block; columns: 2 20rem; column-gap: 2rem; }
+.carta > div { break-inside: avoid; margin-bottom: 2rem; padding: 1.25rem; background: #fffdf8; border: 1px solid rgba(110, 26, 38, .12); border-radius: 10px; box-shadow: 0 4px 14px rgba(59, 36, 22, .08); }
+.carta h3 { color: var(--vino); padding-bottom: .45rem; border-bottom: 2px solid var(--dorado); }
+.carta li { transition: background .2s; }
+.carta li:hover { background: rgba(217, 179, 108, .16); }
+
+.galeria img, .galeria .ph { border-radius: 10px; box-shadow: 0 4px 14px rgba(59, 36, 22, .18); transition: scale .3s, box-shadow .3s; }
+.galeria img:hover, .galeria .ph:hover { scale: 1.03; box-shadow: 0 10px 24px rgba(59, 36, 22, .3); }
+
+table { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 14px rgba(59, 36, 22, .1); }
+.mapa { box-shadow: 0 4px 14px rgba(59, 36, 22, .18); }
+
+section.contacto { background: var(--vino-osc); color: var(--crema); text-align: center; }
+section.contacto h2 { color: var(--crema); }
+.contacto .btns { margin-inline: auto; }
+footer { border-top: 3px solid var(--dorado); }
+
+/* Animaciones: solo si el usuario no ha pedido reducir el movimiento */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes subir { from { opacity: 0; translate: 0 24px; } }
+  @keyframes brillo { from { opacity: .45; } to { opacity: 1; } }
+  @keyframes acercar { from { scale: 1.08; } }
+  @keyframes entrar-abajo { from { translate: 0 100%; } }
+  .hero h1, .lema, .hero .btns, .nota { animation: subir .8s cubic-bezier(.2, .7, .2, 1) both; }
+  .lema { animation-delay: .15s; }
+  .hero .btns { animation-delay: .3s; }
+  .nota { animation-delay: .45s; }
+  .hero-media::after { animation: brillo 5s ease-in-out 3 alternate both; }
+  .hero-media img { animation: acercar 14s ease-out both; }
+  .callbar { animation: entrar-abajo .5s .8s ease-out both; }
+
+  /* .js y .reveal los añade anim.js: sin JavaScript todo queda visible */
+  .js .reveal { opacity: 0; translate: 0 22px; transition: opacity .6s ease var(--retraso, 0ms), translate .6s cubic-bezier(.2, .7, .2, 1) var(--retraso, 0ms); }
+  .js .reveal.visible { opacity: 1; translate: 0 0; }
+}
+@media print { .js .reveal { opacity: 1; translate: 0 0; } }
