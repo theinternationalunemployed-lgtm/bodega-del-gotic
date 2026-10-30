@@ -1,12 +1,20 @@
 @import "tailwindcss";
 
-/* Misma paleta que la web (../styles.css) */
+/* Misma identidad que la web (../styles.css): tipografías y colores de la carta del local */
+@font-face { font-family: "Anton"; src: url(./fonts/anton.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Special Elite"; src: url(./fonts/special-elite.woff2) format("woff2"); font-display: swap; }
+
+/* Los nombres de color son los que ya usan los componentes */
 @theme {
-  --color-vino: #6e1a26;
-  --color-vino-osc: #4a1019;
-  --color-madera: #3b2416;
-  --color-crema: #f8f1e4;
-  --color-crema-2: #efe3cf;
-  --color-tinta: #2a1c12;
-  --font-titulos: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --color-vino: #a3171c;
+  --color-vino-osc: #7d1014;
+  --color-madera: #1c2f6b;
+  --color-crema: #fbf0e3;
+  --color-crema-2: #f6e5d3;
+  --color-tinta: #1c2f6b;
+  --font-titulos: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-sans: "Special Elite", "American Typewriter", "Courier New", monospace;
 }
+
+/* Anton solo tiene un grosor: sin negrita falsa */
+.font-titulos { font-weight: 400; text-transform: uppercase; letter-spacing: .03em; }
