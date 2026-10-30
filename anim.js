@@ -10,6 +10,7 @@
     if (e.isIntersecting) links.forEach((a) => a.classList.toggle('on', a.hash === `#${e.target.id}`));
   }), { rootMargin: '-45% 0px -50% 0px' });
   links.forEach((a) => spy.observe(document.querySelector(a.hash)));
+  spy.observe(document.querySelector('.hero')); // sin enlace propio: al volver arriba no queda nada marcado
 
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
